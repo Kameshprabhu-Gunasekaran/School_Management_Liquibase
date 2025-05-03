@@ -59,6 +59,7 @@ public class TutorControllerTest {
     @BeforeEach
     public void setUp() {
         mockMvc = MockMvcBuilders.standaloneSetup(tutorController)
+//                .setControllerAdvice(new GlobalExceptionHandler()) // Add this line
                 .build();
         tutor = new Tutor();
         tutor.setId(1L);
@@ -106,10 +107,13 @@ public class TutorControllerTest {
         when(tutorService.retrieveById(id))
                 .thenThrow(new ResourceNotFoundException("Tutor not found"));
         mockMvc = MockMvcBuilders.standaloneSetup(tutorController)
-                .setControllerAdvice(new GlobalExceptionHandler())
+                .setControllerAdvice(new GlobalExceptionHandler()) // Add this line
                 .build();
         mockMvc.perform(get("/api/v1/tutor/retrieve/{id}", id))
                 .andExpect(status().isNotFound());
+//                .andExpect(jsonPath("$.message").value("Tutor not found")) // Ensure the message is correct
+//                .andExpect(jsonPath("$.statusCode").value(404))
+//                .andExpect(jsonPath("$.data").value(nullValue()));
 
         verify(tutorService, times(1)).retrieveById(id);
     }
