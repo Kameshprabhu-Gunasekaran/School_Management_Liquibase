@@ -15,7 +15,7 @@
     <include file="db/changelog/20250502033550_create_role.xml"/>
     <include file="db/changelog/20250502034356_insert_school.xml"/>
     <include file="db/changelog/20250502044650_delete_school.xml"/>
-<!--    <include file="db/changelog/20250505051425_insert_student.xml"/>-->
     <include file="db/changelog/20250505060345_insert_tutor.xml"/>
+    <include file="db/changelog/20250505051425_insert_student.xml"/>
 
 </databaseChangeLog>
