@@ -3,7 +3,7 @@
         xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
-                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
+                            http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
 
     <include file="db/changelog/20250502121011_create_school.xml"/>
     <include file="db/changelog/20250502125015_create_tutor.xml"/>
@@ -13,5 +13,9 @@
     <include file="db/changelog/20250502011050_create_salary.json"/>
     <include file="db/changelog/20250502012015_create_user.sql"/>
     <include file="db/changelog/20250502033550_create_role.xml"/>
+    <include file="db/changelog/20250502034356_insert_school.xml"/>
+    <include file="db/changelog/20250502044650_delete_school.xml"/>
+<!--    <include file="db/changelog/20250505051425_insert_student.xml"/>-->
+    <include file="db/changelog/20250505060345_insert_tutor.xml"/>
 
 </databaseChangeLog>

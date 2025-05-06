@@ -1,0 +1,31 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
+
+    <changeSet id="fa6b7a6a-5491-4d4d-b266-c086d5f4a933" author="Kamesh">
+        <insert tableName="tutor">
+            <column name="id" value="db647744-9525-4f63-b4e1-3fd0d48a0da8"/>
+            <column name="name" value="Suresh Kumar"/>
+            <column name="subject" value="Mathematics"/>
+            <column name="salary" value="45000"/>
+            <column name="school_id" value="0680ac8f-d2a8-4736-9aa2-38723066ef4f"/>
+        </insert>
+        <insert tableName="tutor">
+            <column name="id" value="aab849e4-8821-4ac0-8c29-78e4ec73eb4e"/>
+            <column name="name" value="Divya Raj"/>
+            <column name="subject" value="Physics"/>
+            <column name="salary" value="48000"/>
+            <column name="school_id" value="275b9041-ff7d-4725-96d4-8247426209cc"/>
+        </insert>
+        <insert tableName="tutor">
+            <column name="id" value="61477ada-5d7e-4fc0-a886-e9af7228b1ce"/>
+            <column name="name" value="Raghav Menon"/>
+            <column name="subject" value="Chemistry"/>
+            <column name="salary" value="47000"/>
+            <column name="school_id" value="604b0aef-510f-47de-8877-302b36e7a2be"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

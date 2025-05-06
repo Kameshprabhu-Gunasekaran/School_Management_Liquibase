@@ -7,7 +7,7 @@
 
     <changeSet id="7e5c6d18-e15f-4e14-bcdf-c7452ddd8d9b" author="Kamesh">
         <createTable tableName="course">
-            <column name="id" type="BIGINT">
+            <column name="id" type="VARCHAR(36)">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
             <column name="name" type="VARCHAR(255)">
@@ -16,8 +16,8 @@
             <column name="fees" type="BIGINT">
                 <constraints nullable="false"/>
             </column>
-            <column name="school_id" type="BIGINT"/>
-            <column name="tutor_id" type="BIGINT"/>
+            <column name="school_id" type="VARCHAR(36)"/>
+            <column name="tutor_id" type="VARCHAR(36)"/>
         </createTable>
 
         <addForeignKeyConstraint

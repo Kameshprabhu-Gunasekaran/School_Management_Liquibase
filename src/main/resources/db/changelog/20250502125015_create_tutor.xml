@@ -7,7 +7,7 @@
 
     <changeSet id="fd72fc26-0813-48eb-82f3-ea4aaed3e6d2" author="Kamesh">
         <createTable tableName="tutor">
-            <column name="id" type="BIGINT">
+            <column name="id" type="VARCHAR(36)">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
             <column name="name" type="VARCHAR(255)">
@@ -19,7 +19,7 @@
             <column name="salary" type="DOUBLE">
                 <constraints nullable="false"/>
             </column>
-            <column name="school_id" type="BIGINT"/>
+            <column name="school_id" type="VARCHAR(36)"/>
         </createTable>
 
         <addForeignKeyConstraint
