@@ -22,4 +22,22 @@
         </createTable>
     </changeSet>
 
+    <changeSet id="05f55915-0771-44f3-aaa9-9d7b06a299bf" author="Kamesh">
+        <addColumn tableName="school">
+            <column name="email" type="VARCHAR(255)">
+                <constraints nullable="true"/>
+            </column>
+        </addColumn>
+    </changeSet>
+
+    <changeSet id="c82a3bcc-6302-463e-bad4-b08470240a0d" author="Kamesh">
+        <sql>
+            CREATE VIEW student_school_view AS
+            SELECT s.id AS student_id, s.name AS student_name, sc.name AS school_name
+            FROM student s
+            JOIN school sc ON s.school_id = sc.id;
+        </sql>
+    </changeSet>
+
+
 </databaseChangeLog>
